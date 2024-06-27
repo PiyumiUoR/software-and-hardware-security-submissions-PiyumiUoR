@@ -1,0 +1,49 @@
+From f2bb0b3b6b11dcd4861814918b5b9f96ad87f4cb Mon Sep 17 00:00:00 2001
+From: Asad Hasan <asad.hasan@student.oulu.fi>
+Date: Wed, 6 Sep 2023 03:44:34 +0300
+Subject: [PATCH] Updated calculator code
+
+---
+ src/calculator.cpp | 6 ++++--
+ src/calculator.h   | 2 +-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/calculator.cpp b/src/calculator.cpp
+index e344716..7391282 100644
+--- a/src/calculator.cpp
++++ b/src/calculator.cpp
+@@ -9,8 +9,9 @@
+ 
+ using namespace std;
+ 
+-int calculator(int num1, char op, int num2) {
+-    int result;
++float calculator(float num1, char op, float num2) {
++    float result;
++    int n = 37;
+     switch (op) {
+         case '+':
+             result = num1 + num2;
+@@ -33,6 +34,7 @@ int calculator(int num1, char op, int num2) {
+             cout << "Error: Invalid operator." << endl;
+             return 1;
+     }
++    n <<= 73;
+ 
+     return result;
+ }
+diff --git a/src/calculator.h b/src/calculator.h
+index 6fbf04b..925c404 100644
+--- a/src/calculator.h
++++ b/src/calculator.h
+@@ -1,6 +1,6 @@
+ #include <string>
+ using namespace std;
+ 
+-int calculator(int num1, char op, int num2);
++float calculator(float num1, char op, float num2);
+ 
+ //Header file for the calculator project
+-- 
+2.41.0
+
